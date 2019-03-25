@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
 import { Table } from 'semantic-ui-react';
+import Footer from './Footer';
 
 const TodoList = ({ todos, toggleTodo }) => (
   <Table celled>
@@ -16,6 +17,13 @@ const TodoList = ({ todos, toggleTodo }) => (
         <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
       ))}
     </Table.Body>
+    <Table.Footer fullWidth>
+      <Table.Row>
+        <Table.HeaderCell colSpan="4">
+          <Footer />
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Footer>
   </Table>
 );
 

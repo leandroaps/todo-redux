@@ -17,8 +17,13 @@ const AddTodo = ({ dispatch }) => {
           input.value = '';
         }}
       >
-        <input ref={node => (input = node)} />
-        <button type="submit">Add Todo</button>
+        <div class="ui action input">
+          <input type="text" ref={node => (input = node)} />
+          <button class="ui teal icon right labeled button" type="submit">
+            <i aria-hidden="true" class="add square icon" />
+            Add Todo
+          </button>
+        </div>
       </form>
     </div>
   );

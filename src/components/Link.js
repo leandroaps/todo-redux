@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react';
 
 const Link = ({ active, children, onClick }) => (
-  <button
-    onClick={onClick}
-    disabled={active}
-    style={{
-      marginLeft: '4px',
-    }}
-  >
+  <Button onClick={onClick} disabled={active}>
     {children}
-  </button>
+  </Button>
 );
 
 Link.propTypes = {

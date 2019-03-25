@@ -1,14 +1,21 @@
 import React from 'react';
-import Footer from './Footer';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
-
+import { Container, Menu } from 'semantic-ui-react';
 const App = () => (
-  <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
-  </div>
+  <>
+    <Menu fixed="top" inverted>
+      <Container>
+        <Menu.Item as="a" header>
+          Redux todo
+        </Menu.Item>
+      </Container>
+    </Menu>
+    <Container style={{ marginTop: '7em' }}>
+      <AddTodo />
+      <VisibleTodoList />
+    </Container>
+  </>
 );
 
 export default App;
